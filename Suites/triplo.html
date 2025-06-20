@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Pilar Palace Hotel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Para o texto com gradiente no título do header */
+    .text-gradient {
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Header -->
+  <header class="fixed w-full bg-white shadow-md z-50 backdrop-blur-sm">
+    <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="./" class="flex items-center space-x-4 text-gray-900 hover:opacity-90 transition-opacity duration-300">
+        <img src="/Imagens/logoHotel.jpeg" alt="Logo Pilar Palace" class="h-12 w-12 rounded-full shadow-md object-cover" />
+        <span class="text-3xl font-extrabold tracking-wide text-gradient bg-gradient-to-r from-blue-600 to-cyan-400">
+          Pilar Palace Hotel
+        </span>
+      </a>
+
+      <!-- Botão hamburguer (aparece em telas pequenas) -->
+      <button id="btn-menu" aria-label="Abrir menu" class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Menu -->
+      <div id="menu" class="hidden md:flex space-x-10">
+        <a href="/index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
+          Home
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
+          Suítes
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="/Cafe_da_Manhã/index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
+          Café da Manha
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="/Pontos_Turisticos/index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
+          Pontos Turisticos
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="/Contato/index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
+          Contato
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div id="menu-mobile" class="hidden md:hidden bg-white shadow-md border-t border-gray-200">
+      <nav class="flex flex-col px-6 py-4 space-y-4">
+        <a href="/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Home</a>
+        <a href="index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Suítes</a>
+        <a href="/Cafe_da_Manhã/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Café da Manha</a>
+        <a href="/Pontos_Turisticos/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Pontos Turisticos</a>
+        <a href="/Contato/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Espaço para evitar que conteúdo fique atrás do header fixo -->
+  <div class="h-20"></div>
+    <!--/ Header-->
+
+  <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden mt-8 mb-12">
+    <img src="/Imagens/triplo teste.jpg" alt="Suíte Triplo" class="w-full h-64 object-cover">
+
+    <div class="p-6">
+      <h1 class="text-3xl font-bold text-blue-800 mb-2">Suíte Triplo</h1>
+      <p class="text-gray-700 mb-4">
+        A Suíte Triplo é ideal para pequenos grupos ou famílias com até três pessoas. Oferece espaço, conforto e praticidade, mantendo o padrão de qualidade do Pilar Palace Hotel.
+      </p>
+
+      <h2 class="text-xl font-semibold text-gray-800 mt-4 mb-2">Comodidades:</h2>
+      <ul class="list-disc list-inside text-gray-600 space-y-1">
+        <li>1 cama de casal + 1 cama de solteiro</li>
+        <li>Ventilador</li>
+        <li>TV</li>
+        <li>Wi-Fi gratuito</li>
+        <li>Banheiro espaçoso</li>
+        <li>Frigobar</li>
+      </ul>
+
+      <div class="flex flex-col sm:flex-row items-center gap-4 mt-6">
+        <a href="/reserva.html" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition font-semibold">Fazer reserva</a>
+        <a href="index.html" class="text-blue-600 hover:underline font-medium">← Voltar para tipos de suítes</a>
+      </div>
+    </div>
+  </div>
+
+ <!-- Footer-->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 mb:md-0">
+            <h3 class="text-2xl font-bold">Pilar Palace Hotel</h3>
+          </div>
+          <!--/ Div Logo-->
+          <div class="flex space-x-6">
+            <a href="#" class="hover:text-indigo-400">
+              <span class="sr-only">Instagram</span>
+              <i class="fab fa-instagram 2-xl"></i>
+            </a>
+
+            <a href="#" class="hover:text-indigo-400">
+              <span class="sr-only">Linkedin</span>
+              <i class="fab fa-linkedin-in 2-xl"></i>
+            </a>
+          </div>
+        </div>
+        <div class="mt-8 text-center text-gray-400">
+          <p>&copy; 2025 Pilar Palace Hotel. Todos os direitos reservados</p>
+        </div>
+      </div>
+    </footer>
+    <!--/ Footer-->
+
+    <!-- Scirpt enviar email via formulário-->
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          console.log("Dados do formulario:", {
+            name: this.name.value,
+            email: this.email.value,
+            message: this.message.value,
+            phone: this.phone.value,
+          });
+
+          emailjs.sendForm("service_u4xje1n", "template_ghvrauy", this).then(
+            function (response) {
+              console.log("Sucesso: ", response);
+              alert("Mensagem enviada com sucesso");
+              document.getElementById("contact-form").reset();
+            },
+            function (error) {
+              console.log("Erro:", error);
+              alert("Ocorreu um erro ao enviar a mensagem. Tente novamente.");
+            }
+          );
+        });
+    </script>
+  </body>
+</html>
