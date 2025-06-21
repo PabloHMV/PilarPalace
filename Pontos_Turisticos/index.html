@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pontos Turisticos - Pilar Palace Hotel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Para o texto com gradiente no título do header */
+    .text-gradient {
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Header -->
+  <header class="fixed w-full bg-white shadow-md z-50 backdrop-blur-sm">
+    <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="./" class="flex items-center space-x-4 text-gray-900 hover:opacity-90 transition-opacity duration-300">
+        <img src="/Imagens/logoHotel.jpeg" alt="Logo Pilar Palace" class="h-12 w-12 rounded-full shadow-md object-cover" />
+        <span class="text-3xl font-extrabold tracking-wide text-gradient bg-gradient-to-r from-blue-600 to-cyan-400">
+          Pilar Palace Hotel
+        </span>
+      </a>
+
+      <!-- Botão hamburguer (aparece em telas pequenas) -->
+      <button id="btn-menu" aria-label="Abrir menu" class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Menu desktop -->
+      <div id="menu" class="hidden md:flex space-x-10">
+        <a href="/index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
+          Home
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="/Suites/index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
+          Suítes
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="/Cafe_da_Manhã/index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
+          Café da Manha
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="/Pontos_Turisticos/index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
+          Pontos Turisticos
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="Contato/index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
+          Contato
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div id="menu-mobile" class="hidden md:hidden bg-white shadow-md border-t border-gray-200">
+      <nav class="flex flex-col px-6 py-4 space-y-4">
+        <a href="/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Home</a>
+        <a href="/Suites/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Suítes</a>
+        <a href="/Cafe_da_Manhã/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Café da Manha</a>
+        <a href="/Pontos_Turisticos/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Pontos Turisticos</a>
+        <a href="Contato/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Espaço para evitar que conteúdo fique atrás do header fixo -->
+  <div class="h-20"></div>
+
+   <!-- Conteúdo principal -->
+  <main class="pt-24 px-4 pb-10 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Pontos Turísticos Próximos</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- Lajeado -->
+      <div class="card bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 cursor-pointer">
+        <img src="/Imagens/lajeado.jpg" alt="lajeado" class="w-full h-48 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-semibold mb-1">Lajeado</h3>
+          <p class="text-sm text-gray-600 mb-3">-----</p>
+          <a href="https://maps.app.goo.gl/ui9wpgFXuhqpK5RQ8" target="_blank" class="text-blue-600 hover:underline text-sm">Ver no mapa</a>
+        </div>
+      </div>
+
+      <!-- Cachoeira das Pedras< -->
+      <div class="card bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 cursor-pointer">
+        <img src="/Imagens/Pedras.jpg" alt="Cachoeira das Pedras" class="w-full h-48 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-semibold mb-1">Cachoeira das Pedras</h3>
+          <p class="text-sm text-gray-600 mb-3">Pequena queda com poço para banho. Acesso fácil e gratuito.</p>
+          <a href="https://maps.app.goo.gl/qKFxAsWpGjX329GD8" target="_blank" class="text-blue-600 hover:underline text-sm">Ver no mapa</a>
+        </div>
+      </div>
+
+      <!-- Cachoeira do Tombo -->
+      <div class="card bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 cursor-pointer">
+        <img src="/Imagens/Tombo.jpg" alt="Cachoeira do Tombo" class="w-full h-48 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-semibold mb-1">Cachoeira do Tombo</h3>
+          <p class="text-sm text-gray-600 mb-3">Queda de 50m com grande poço para banho. Acesso rural gratuito.</p>
+          <a href="https://maps.app.goo.gl/zKumYxc1guk8xgMf7" target="_blank" class="text-blue-600 hover:underline text-sm">Ver no mapa</a>
+        </div>
+      </div>
+
+      <!-- Andorinhas -->
+      <div class="card bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 cursor-pointer">
+        <img src="/Imagens/Andorinhas..jpg" alt="Cachoeira das Andorinhas" class="w-full h-48 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-semibold mb-1">Cachoeira das Andorinhas</h3>
+          <p class="text-sm text-gray-600 mb-3">Cachoeira em cânion, trilha longa (~12km), visual incrível.</p>
+          <a href="https://g.co/kgs/HjBmDkP" target="_blank" class="text-blue-600 hover:underline text-sm">Ver no mapa</a>
+        </div>
+      </div>
+
+      <!-- Igreja do Canga -->
+      <div class="card bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 cursor-pointer">
+        <img src="/Imagens/canga.png" alt="Igreja do Canga" class="w-full h-48 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-semibold mb-1">Igrejinha do Canga</h3>
+          <p class="text-sm text-gray-600 mb-3">------</p>
+          <a href="https://maps.app.goo.gl/jcoLdEeebjtCFLRv6" target="_blank" class="text-blue-600 hover:underline text-sm">Ver no mapa</a>
+        </div>
+      </div>
+
+      <!-- Igreja Matriz -->
+      <div class="card bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 cursor-pointer">
+        <img src="/Imagens/igreja.jpg" alt="Igreja Matriz" class="w-full h-48 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-semibold mb-1">Igreja Matriz</h3>
+          <p class="text-sm text-gray-600 mb-3">Igreja principal da cidade com arquitetura colonial histórica.</p>
+          <a href="https://maps.app.goo.gl/eWidaTF2dHsnEinW6" target="_blank" class="text-blue-600 hover:underline text-sm">Ver no mapa</a>
+        </div>
+      </div>
+
+      <!-- Cachoeira da Naná -->
+      <div class="card bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 cursor-pointer">
+        <img src="/Imagens/Naná.jpg" alt="Cachoeira da Naná" class="w-full h-48 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-semibold mb-1">Cachoeira da Naná</h3>
+          <p class="text-sm text-gray-600 mb-3">---------</p>
+          <a href="https://maps.app.goo.gl/zChC5kHm684jpgZHA" target="_blank" class="text-blue-600 hover:underline text-sm">Ver no mapa</a>
+        </div>
+      </div>
+      
+      <!-- Cachoeira da Santa -->
+      <div class="card bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 cursor-pointer">
+        <img src="/Imagens/Santa.jpg" alt="Cachoeira da Santa" class="w-full h-48 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-semibold mb-1">Cachoeira da Santa</h3>
+          <p class="text-sm text-gray-600 mb-3">--------</p>
+          <a href="https://maps.app.goo.gl/gTw4MdXK2Yj738dd9" target="_blank" class="text-blue-600 hover:underline text-sm">Ver no mapa</a>
+        </div>
+      </div>
+
+      <!-- Cachoeira do Pica Pau -->
+      <div class="card bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 cursor-pointer">
+        <img src="/Imagens/picapau1.png" alt="Cachoeira do Pica Pau" class="w-full h-48 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-semibold mb-1">Cachoeira do Pica Pau</h3>
+          <p class="text-sm text-gray-600 mb-3">--------</p>
+          <a href="https://maps.app.goo.gl/f7a7rXtXuFo9DRrQ7" target="_blank" class="text-blue-600 hover:underline text-sm">Ver no mapa</a>
+        </div>
+      </div>
+
+      <!-- Pedra do cachimbo -->
+      <div class="card bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 cursor-pointer">
+        <img src="/Imagens/fundopreto.jpg" alt="Pedra do cachimbo" class="w-full h-48 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-semibold mb-1">Pedra do cachimbo</h3>
+          <p class="text-sm text-gray-600 mb-3">--------</p>
+          <a href="https://maps.app.goo.gl/beZZevPSPUsqvswP7" target="_blank" class="text-blue-600 hover:underline text-sm">Ver no mapa</a>
+        </div>
+      </div>
+
+      <!-- Primeira Fabrica De Ferro do Brasil -->
+      <div class="card bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 cursor-pointer">
+        <img src="/Imagens/fundopreto.jpg" alt="Primeira Fabrica De Ferro do Brasil" class="w-full h-48 object-cover">
+        <div class="p-4 text-center">
+          <h3 class="text-xl font-semibold mb-1">Primeira Fabrica De Ferro do Brasil</h3>
+          <p class="text-sm text-gray-600 mb-3">--------</p>
+          <a href="https://maps.app.goo.gl/nfUYmeoZspNBQG6i7" target="_blank" class="text-blue-600 hover:underline text-sm">Ver no mapa</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    // Seleciona todos os cards
+    const cards = document.querySelectorAll('.card');
+    let activeCard = null;
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        if (activeCard && activeCard !== card) {
+          activeCard.classList.remove('scale-105');
+        }
+        if (card.classList.contains('scale-105')) {
+          card.classList.remove('scale-105');
+          activeCard = null;
+        } else {
+          card.classList.add('scale-105');
+          activeCard = card;
+        }
+      });
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12 mt-12">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <h3 class="text-2xl font-bold">Pilar Palace Hotel</h3>
+        </div>
+        <div class="flex space-x-6 text-2xl">
+          <a href="#" class="hover:text-indigo-400" aria-label="Instagram">
+            <i class="fab fa-instagram"></i> <!-- Para funcionar, precisa do FontAwesome -->
+          </a>
+          <a href="#" class="hover:text-indigo-400" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+      <div class="mt-8 text-center text-gray-400">
+        <p>&copy; 2025 Pilar Palace Hotel. Todos os direitos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script para menu hamburguer -->
+  <script>
+    const btnMenu = document.getElementById('btn-menu');
+    const menuMobile = document.getElementById('menu-mobile');
+
+    btnMenu.addEventListener('click', () => {
+      menuMobile.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Script para enviar email via formulário com alertas -->
+  <script>
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        alert("Mensagem enviada com sucesso! Responderemos o mais rápido possível.");
+        this.reset();
+
+        // Opcional: para realmente enviar via formsubmit.co
+        // this.submit();
+      });
+  </script>
+
+</body>
+</html>

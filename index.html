@@ -1,170 +1,121 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title> Pilar Palace Hotel</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Para o texto com gradiente no título do header */
-    .text-gradient {
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-  </style>
-</head>
-<body class="bg-gray-50 font-sans">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home - Pilar Palace Hotel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <style>
+      .text-gradient {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50 backdrop-blur-sm">
+      <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="./" class="flex items-center space-x-4 text-gray-900 hover:opacity-90">
+          <img src="/Imagens/logoHotel.jpeg" alt="Logo Pilar Palace" class="h-12 w-12 rounded-full object-cover" />
+          <span class="text-3xl font-extrabold tracking-wide text-gradient bg-gradient-to-r from-blue-600 to-cyan-400">
+            Pilar Palace Hotel
+          </span>
+        </a>
 
-  <!-- Header -->
-  <header class="fixed w-full bg-white shadow-md z-50 backdrop-blur-sm">
-    <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="./" class="flex items-center space-x-4 text-gray-900 hover:opacity-90 transition-opacity duration-300">
-        <img src="/Imagens/logoHotel.jpeg" alt="Logo Pilar Palace" class="h-12 w-12 rounded-full shadow-md object-cover" />
-        <span class="text-3xl font-extrabold tracking-wide text-gradient bg-gradient-to-r from-blue-600 to-cyan-400">
-          Pilar Palace Hotel
-        </span>
-      </a>
+        <!-- Botão hamburguer -->
+        <button id="btn-menu" aria-label="Abrir menu" class="md:hidden text-gray-700 hover:text-blue-600">
+          <i class="bi bi-list text-3xl"></i>
+        </button>
 
-      <!-- Botão hamburguer (aparece em telas pequenas) -->
-      <button id="btn-menu" aria-label="Abrir menu" class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-
-      <!-- Menu -->
-      <div id="menu" class="hidden md:flex space-x-10">
-        <a href="index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
-          Home
-          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="Suites/index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
-          Suítes
-          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="Cafe_da_Manhã/index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
-          Café da Manha
-          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="Pontos_Turisticos/index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
-          Pontos Turisticos
-          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="Contato/index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
-          Contato
-          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-      </div>
-    </nav>
-
-    <!-- Menu mobile -->
-    <div id="menu-mobile" class="hidden md:hidden bg-white shadow-md border-t border-gray-200">
-      <nav class="flex flex-col px-6 py-4 space-y-4">
-        <a href="index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Home</a>
-        <a href="Suites/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Suítes</a>
-        <a href="Cafe_da_Manhã/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Café da Manha</a>
-        <a href="Pontos_Turisticos/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Pontos Turisticos</a>
-        <a href="Contato/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Contato</a>
+        <!-- Menu desktop -->
+        <div id="menu" class="hidden md:flex space-x-10">
+          <a href="index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Home</a>
+          <a href="Suites/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Suítes</a>
+          <a href="Cafe_da_Manhã/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Café da Manhã</a>
+          <a href="Pontos_Turisticos/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Pontos Turísticos</a>
+          <a href="Contato/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Contato</a>
+        </div>
       </nav>
-    </div>
-  </header>
 
-  <!-- Espaço para evitar que conteúdo fique atrás do header fixo -->
-  <div class="h-20"></div>
-    <!--/ Header-->
-
-    <!-- Imagem de fundo com texto -->
-    <div class="relative h-screen bg-cover bg-center" style="background-image: url('imagens/imagemhotel.jpeg');">
-      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div class="absolute inset-0 flex items-center justify-center">
-        <div class="text-center text-white px-4">
-          <h1 class="text-4xl font-bold mb-4">Bem-vindo ao Pilar Palace Hotel</h1>
-          <p class="text-xl">Conforto, elegância e tranquilidade para sua estadia.</p>
-        </div>
+      <!-- Menu Mobile -->
+      <div id="menu-mobile" class="hidden md:hidden bg-white shadow-md border-t border-gray-200">
+        <nav class="flex flex-col px-6 py-4 space-y-4">
+          <a href="index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Home</a>
+          <a href="Suites/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Suítes</a>
+          <a href="Cafe_da_Manhã/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Café da Manhã</a>
+          <a href="Pontos_Turisticos/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Pontos Turísticos</a>
+          <a href="Contato/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Contato</a>
+        </nav>
       </div>
-    </div>
+    </header>
 
-   <!-- Formulario Contato-->
-        <div class="max-w-2xl mx-auto">
-          <form action="" id="contact-form" class="space-y-6">
-            <div>
-              <label for="name" class="block text-gray-700 mb-2">Nome</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                required
-                class="full px-4 py-2 border-gray-300 rounded-lg focus:outline-nome focus:ring-2 focus:ring-indigo-500"
-              />
-            </div>
+    <!-- Espaço para o header fixo -->
+    <div class="h-20"></div>
 
-            <div>
-              <label for="email" class="block text-gray-700 mb-2">E-mail</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                required
-                class="full px-4 py-2 border-gray-300 rounded-lg focus:outline-nome focus:ring-2 focus:ring-indigo-500"
-              />
-            </div>
-
-            <div>
-              <label for="phone" class="block text-gray-700 mb-2"
-                >Telefone</label
-              >
-              <input
-                type="phone"
-                name="phone"
-                id="phone"
-                class="full px-4 py-2 border-gray-300 rounded-lg focus:outline-nome focus:ring-2 focus:ring-indigo-500"
-              />
-            </div>
-
-            <div>
-              <label for="message" class="block text-gray-700 mb-2"
-                >Mensagem</label
-              >
-              <textarea
-                name="message"
-                id="message"
-                required
-                class="full px-4 py-2 border-gray-300 rounded-lg focus:outline-nome focus:ring-2 focus:ring-indigo-500"
-              ></textarea>
-              <button
-                type="submit"
-                class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition duration-300"
-              >
-                Enviar Mensagem
-              </button>
-            </div>
-          </form>
-        </div>
-        <!--/ Formulario Contato-->
+    <!-- Banner -->
+    <section class="relative">
+      <img src="Imagens/imagemhotel.jpeg" alt="Fachada do hotel" class="w-full h-96 object-cover" />
+      <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+        <h2 class="text-4xl sm:text-5xl text-white font-bold">Bem-vindo ao Pilar Palace Hotel</h2>
       </div>
     </section>
 
-    <!--/ Contato Section-->
+    <!-- Sobre -->
+    <section class="max-w-5xl mx-auto px-6 py-12 text-center">
+      <h3 class="text-3xl font-semibold text-blue-900 mb-4">Conforto, Tradição e Hospitalidade</h3>
+      <p class="text-lg text-gray-700">
+        Localizado no coração de Morro do Pilar, o Pilar Palace Hotel oferece uma experiência única, unindo charme colonial com o conforto que você merece.
+        Seja para descanso, passeio ou trabalho, estamos prontos para te receber com carinho e excelência.
+      </p>
+    </section>
 
-    <!-- Footer-->
-    <footer class="bg-gray-900 text-white py-12">
+    <!-- Destaques -->
+    <section class="bg-blue-50 py-10">
+      <div class="max-w-6xl mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+        <a href="Suites/index.html" class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+          <img src="Imagens/duploteste.jpg" alt="Quartos" class="mx-auto h-16 mb-4" />
+          <h4 class="text-xl font-semibold text-blue-800 mb-2">Nossos Quartos</h4>
+          <p class="text-sm text-gray-600">Conforto e tranquilidade em cada detalhe.</p>
+        </a>
+
+        <a href="Cafe_da_Manhã/index.html" class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+          <img src="Imagens/cafe1.jpeg" alt="Café da Manhã" class="mx-auto h-16 mb-4" />
+          <h4 class="text-xl font-semibold text-blue-800 mb-2">Café da Manhã</h4>
+          <p class="text-sm text-gray-600">Sabores artesanais e ambiente acolhedor.</p>
+        </a>
+
+        <a href="Pontos_Turisticos/index.html" class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+          <img src="Imagens/igreja.jpg" alt="Pontos Turísticos" class="mx-auto h-16 mb-4" />
+          <h4 class="text-xl font-semibold text-blue-800 mb-2">O que Fazer</h4>
+          <p class="text-sm text-gray-600">Conheça as belezas de Morro do Pilar.</p>
+        </a>
+
+        <a href="Contato/index.html" class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+          <img src="icone-contato.png" alt="Contato" class="mx-auto h-16 mb-4" />
+          <h4 class="text-xl font-semibold text-blue-800 mb-2">Fale Conosco</h4>
+          <p class="text-sm text-gray-600">Dúvidas, reservas e mais informações.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-10">
       <div class="container mx-auto px-6">
         <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="mb-6 mb:md-0">
-            <h3 class="text-2xl font-bold">Portfolio</h3>
-            <p class="text-gray-400 mt-2">Desenvolvedor Full Stack</p>
-          </div>
-          <!--/ Div Logo-->
+          <h3 class="text-2xl font-bold mb-4 md:mb-0">Pilar Palace</h3>
           <div class="flex space-x-6">
-            <a href="#" class="hover:text-indigo-400">
-              <span class="sr-only">Instagram</span>
-              <i class="fab fa-instagram 2-xl"></i>
+            <a href="https://wa.me/seunumero" target="_blank" aria-label="WhatsApp" class="hover:text-green-400 transition text-2xl">
+              <i class="bi bi-whatsapp"></i>
             </a>
-
-            <a href="#" class="hover:text-indigo-400">
-              <span class="sr-only">Linkedin</span>
-              <i class="fab fa-linkedin-in 2-xl"></i>
+            <a href="https://instagram.com/pilar_palace_hotel" target="_blank" aria-label="Instagram" class="hover:text-pink-400 transition text-2xl">
+              <i class="bi bi-instagram"></i>
             </a>
           </div>
         </div>
@@ -173,33 +124,13 @@
         </div>
       </div>
     </footer>
-    <!--/ Footer-->
 
-    <!-- Scirpt enviar email via formulário-->
+    <!-- Scripts -->
     <script>
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          console.log("Dados do formulario:", {
-            name: this.name.value,
-            email: this.email.value,
-            message: this.message.value,
-            phone: this.phone.value,
-          });
-
-          emailjs.sendForm("service_u4xje1n", "template_ghvrauy", this).then(
-            function (response) {
-              console.log("Sucesso: ", response);
-              alert("Mensagem enviada com sucesso");
-              document.getElementById("contact-form").reset();
-            },
-            function (error) {
-              console.log("Erro:", error);
-              alert("Ocorreu um erro ao enviar a mensagem. Tente novamente.");
-            }
-          );
-        });
+      document.getElementById("btn-menu").addEventListener("click", function () {
+        const menuMobile = document.getElementById("menu-mobile");
+        menuMobile.classList.toggle("hidden");
+      });
     </script>
   </body>
 </html>

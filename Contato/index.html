@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title> Pilar Palace Hotel</title>
+  <title>Contato - Pilar Palace Hotel</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     /* Para o texto com gradiente no título do header */
@@ -73,53 +73,34 @@
   <!-- Espaço para evitar que conteúdo fique atrás do header fixo -->
   <div class="h-20"></div>
     <!--/ Header-->
-
-    <!-- Conteúdo da página -->
   <main class="pt-24 flex items-center justify-center min-h-screen p-4">
     <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-8">
       <h1 class="text-3xl font-bold text-blue-700 mb-6 text-center">Entre em Contato</h1>
 
-      <form id="contactForm" action="#" method="POST" class="space-y-5">
+      <!-- Altere abaixo com seu e-mail -->
+      <form action="https://formsubmit.co/reservas@pilarpalacehotel.com.br" method="POST" class="space-y-5">
+
+        <!-- anti-spam invisível -->
+        <input type="hidden" name="_captcha" value="false">
+        <!-- Redirecionamento após envio (opcional) -->
+       <!-- <input type="hidden" name="_next" value="https://seusite.com/obrigado.html"> -->
+
         <div>
           <label for="name" class="block text-gray-700 font-semibold mb-2">Nome</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Seu nome"
-            required
-            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
+          <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md">
         </div>
 
         <div>
           <label for="email" class="block text-gray-700 font-semibold mb-2">E-mail</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="seu@email.com"
-            required
-            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
+          <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md">
         </div>
 
         <div>
           <label for="message" class="block text-gray-700 font-semibold mb-2">Mensagem</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Escreva sua mensagem aqui..."
-            required
-            rows="5"
-            class="w-full px-4 py-2 border border-gray-300 rounded-md resize-y focus:outline-none focus:ring-2 focus:ring-blue-500"
-          ></textarea>
+          <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-md resize-y"></textarea>
         </div>
 
-        <button
-          type="submit"
-          class="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 rounded-md transition-colors"
-        >
+        <button type="submit" class="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 rounded-md transition-colors">
           Enviar
         </button>
       </form>
@@ -128,12 +109,59 @@
     </div>
   </main>
 
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      alert('Mensagem enviada! Obrigado pelo contato.');
-      this.reset();
-    });
-  </script>
-</body>
+<!-- Footer-->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 mb:md-0">
+            <h3 class="text-2xl font-bold">Portfolio</h3>
+            <p class="text-gray-400 mt-2">Desenvolvedor Full Stack</p>
+          </div>
+          <!--/ Div Logo-->
+          <div class="flex space-x-6">
+            <a href="#" class="hover:text-indigo-400">
+              <span class="sr-only">Instagram</span>
+              <i class="fab fa-instagram 2-xl"></i>
+            </a>
+
+            <a href="#" class="hover:text-indigo-400">
+              <span class="sr-only">Linkedin</span>
+              <i class="fab fa-linkedin-in 2-xl"></i>
+            </a>
+          </div>
+        </div>
+        <div class="mt-8 text-center text-gray-400">
+          <p>&copy; 2025 Pilar Palace Hotel. Todos os direitos reservados</p>
+        </div>
+      </div>
+    </footer>
+    <!--/ Footer-->
+
+    <!-- Scirpt enviar email via formulário-->
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          console.log("Dados do formulario:", {
+            name: this.name.value,
+            email: this.email.value,
+            message: this.message.value,
+            phone: this.phone.value,
+          });
+
+          emailjs.sendForm("service_u4xje1n", "template_ghvrauy", this).then(
+            function (response) {
+              console.log("Sucesso: ", response);
+              alert("Mensagem enviada com sucesso");
+              document.getElementById("contact-form").reset();
+            },
+            function (error) {
+              console.log("Erro:", error);
+              alert("Ocorreu um erro ao enviar a mensagem. Tente novamente.");
+            }
+          );
+        });
+    </script>
+  </body>
 </html>
