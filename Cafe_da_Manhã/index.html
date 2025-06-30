@@ -1,147 +1,270 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Café da Manhã - Pilar Palace Hotel</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Para o texto com gradiente no título do header */
-    .text-gradient {
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-  </style>
-</head>
-<body class="bg-gray-50 font-sans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Café da Manhã - Pilar Palace Hotel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Para o texto com gradiente no título do header */
+      .text-gradient {
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50 backdrop-blur-sm">
+      <nav
+        class="container mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <a
+          href="./"
+          class="flex items-center space-x-4 text-gray-900 hover:opacity-90 transition-opacity duration-300"
+        >
+          <img
+            src="../Imagens/logoHotel.jpeg"
+            alt="Logo Pilar Palace"
+            class="h-12 w-12 rounded-full shadow-md object-cover"
+          />
+          <span
+            class="text-3xl font-extrabold tracking-wide text-gradient bg-gradient-to-r from-blue-600 to-cyan-400"
+          >
+            Pilar Palace Hotel
+          </span>
+        </a>
 
-  <!-- Header -->
-  <header class="fixed w-full bg-white shadow-md z-50 backdrop-blur-sm">
-    <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="./" class="flex items-center space-x-4 text-gray-900 hover:opacity-90 transition-opacity duration-300">
-        <img src="../Imagens/logoHotel.jpeg" alt="Logo Pilar Palace" class="h-12 w-12 rounded-full shadow-md object-cover" />
-        <span class="text-3xl font-extrabold tracking-wide text-gradient bg-gradient-to-r from-blue-600 to-cyan-400">
-          Pilar Palace Hotel
-        </span>
-      </a>
+        <!-- Botão hamburguer (aparece em telas pequenas) -->
+        <button
+          id="btn-menu"
+          aria-label="Abrir menu"
+          class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
 
-      <!-- Botão hamburguer (aparece em telas pequenas) -->
-      <button id="btn-menu" aria-label="Abrir menu" class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-
-      <!-- Menu -->
-      <div id="menu" class="hidden md:flex space-x-10">
-        <a href="../index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
-          Home
-          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="../Suites/index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
-          Suítes
-          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="./Cafe_da_Manhã/index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
-          Café da Manha
-          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="../Pontos_Turisticos/index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
-          Pontos Turisticos
-          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="../Contato/index.html" class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group">
-          Contato
-          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
-      </div>
-    </nav>
-
-    <!-- Menu mobile -->
-    <div id="menu-mobile" class="hidden md:hidden bg-white shadow-md border-t border-gray-200">
-      <nav class="flex flex-col px-6 py-4 space-y-4">
-        <a href="../index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Home</a>
-        <a href="../Suites/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Suítes</a>
-        <a href="./Cafe_da_Manhã/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Café da Manha</a>
-        <a href="../Pontos_Turisticos/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Pontos Turisticos</a>
-        <a href="../Contato/index.html" class="text-gray-700 hover:text-blue-600 font-semibold">Contato</a>
+        <!-- Menu -->
+        <div id="menu" class="hidden md:flex space-x-10">
+          <a
+            href="../index.html"
+            class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group"
+          >
+            Home
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="../Suites/index.html"
+            class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group"
+          >
+            Suítes
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="./Cafe_da_Manhã/index.html"
+            class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group"
+          >
+            Café da Manha
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="../Pontos_Turisticos/index.html"
+            class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group"
+          >
+            Pontos Turisticos
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="../Contato/index.html"
+            class="relative text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 group"
+          >
+            Contato
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+        </div>
       </nav>
-    </div>
-  </header>
 
-  <!-- Espaço para evitar que conteúdo fique atrás do header fixo -->
-  <div class="h-20"></div>
+      <!-- Menu mobile -->
+      <div
+        id="menu-mobile"
+        class="hidden md:hidden bg-white shadow-md border-t border-gray-200"
+      >
+        <nav class="flex flex-col px-6 py-4 space-y-4">
+          <a
+            href="../index.html"
+            class="text-gray-700 hover:text-blue-600 font-semibold"
+            >Home</a
+          >
+          <a
+            href="../Suites/index.html"
+            class="text-gray-700 hover:text-blue-600 font-semibold"
+            >Suítes</a
+          >
+          <a
+            href="./Cafe_da_Manhã/index.html"
+            class="text-gray-700 hover:text-blue-600 font-semibold"
+            >Café da Manha</a
+          >
+          <a
+            href="../Pontos_Turisticos/index.html"
+            class="text-gray-700 hover:text-blue-600 font-semibold"
+            >Pontos Turisticos</a
+          >
+          <a
+            href="../Contato/index.html"
+            class="text-gray-700 hover:text-blue-600 font-semibold"
+            >Contato</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Espaço para evitar que conteúdo fique atrás do header fixo -->
+    <div class="h-20"></div>
     <!--/ Header-->
-    
-  <div class="max-w-6xl mx-auto px-6 py-10 bg-white rounded-lg shadow-lg">
 
-    <!-- Título e Descrição -->
-    <h1 class="text-4xl font-bold text-center text-blue-900 mb-4">Café da Manhã</h1>
-    <p class="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-10">
-        Comece o seu dia da melhor forma: com um café da manhã completo, preparado com carinho e servido em um ambiente tranquilo, iluminado pelo sol da manhã. 
-      No Pilar Palace Hotel, o café da manhã é mais do que uma refeição — é uma experiência.
-    </p>
+    <div class="max-w-6xl mx-auto px-6 py-10 bg-white rounded-lg shadow-lg">
+      <!-- Título e Descrição -->
+      <h1 class="text-4xl font-bold text-center text-blue-900 mb-4">
+        Café da Manhã
+      </h1>
+      <p class="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-10">
+        Comece o seu dia da melhor forma: com um café da manhã completo,
+        preparado com carinho e servido em um ambiente tranquilo, iluminado pelo
+        sol da manhã. No Pilar Palace Hotel, o café da manhã é mais do que uma
+        refeição — é uma experiência.
+      </p>
 
-    <!-- Galeria -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <img src="../Imagens/cafe1.jpeg" alt="Café 1" class="gallery-img rounded-lg shadow-md object-cover h-60 w-full cursor-pointer">
-      <img src="../Imagens/cafe1.jpeg" alt="Café 2" class="gallery-img rounded-lg shadow-md object-cover h-60 w-full cursor-pointer">
-      <img src="../Imagens/cafe1.jpeg" alt="Café 3" class="gallery-img rounded-lg shadow-md object-cover h-60 w-full cursor-pointer">
-      <img src="../Imagens/cafe1.jpeg" alt="Café 4" class="gallery-img rounded-lg shadow-md object-cover h-60 w-full cursor-pointer">
-      <img src="../Imagens/cafe1.jpeg" alt="Café 5" class="gallery-img rounded-lg shadow-md object-cover h-60 w-full cursor-pointer">
-      <img src="../Imagens/cafe1.jpeg" alt="Café 6" class="gallery-img rounded-lg shadow-md object-cover h-60 w-full cursor-pointer">
+      <!-- Galeria -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <img
+          src="../Imagens/cafe1.jpeg"
+          alt="Café 1"
+          class="gallery-img rounded-lg shadow-md object-cover h-60 w-full cursor-pointer"
+        />
+        <img
+          src="../Imagens/cafe1.jpeg"
+          alt="Café 2"
+          class="gallery-img rounded-lg shadow-md object-cover h-60 w-full cursor-pointer"
+        />
+        <img
+          src="../Imagens/cafe1.jpeg"
+          alt="Café 3"
+          class="gallery-img rounded-lg shadow-md object-cover h-60 w-full cursor-pointer"
+        />
+        <img
+          src="../Imagens/cafe1.jpeg"
+          alt="Café 4"
+          class="gallery-img rounded-lg shadow-md object-cover h-60 w-full cursor-pointer"
+        />
+        <img
+          src="../Imagens/cafe1.jpeg"
+          alt="Café 5"
+          class="gallery-img rounded-lg shadow-md object-cover h-60 w-full cursor-pointer"
+        />
+        <img
+          src="../Imagens/cafe1.jpeg"
+          alt="Café 6"
+          class="gallery-img rounded-lg shadow-md object-cover h-60 w-full cursor-pointer"
+        />
+      </div>
+
+      <p class="text-sm text-center text-gray-500 mt-10 italic">
+        Servido diariamente das 7h às 10h no salão principal do Pilar Palace
+        Hotel.
+      </p>
     </div>
 
-    <p class="text-sm text-center text-gray-500 mt-10 italic">
-      Servido diariamente das 7h às 10h no salão principal do Pilar Palace Hotel.
-    </p>
-  </div>
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black bg-opacity-80 hidden justify-center items-center z-50"
+    >
+      <span
+        id="closeModal"
+        class="absolute top-4 right-6 text-white text-3xl cursor-pointer"
+        >&times;</span
+      >
+      <img
+        id="modalImg"
+        src=""
+        alt="Imagem ampliada"
+        class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl"
+      />
+    </div>
 
-  <!-- Modal -->
-  <div id="modal" class="fixed inset-0 bg-black bg-opacity-80 hidden justify-center items-center z-50">
-    <span id="closeModal" class="absolute top-4 right-6 text-white text-3xl cursor-pointer">&times;</span>
-    <img id="modalImg" src="" alt="Imagem ampliada" class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl">
-  </div>
+    <!-- Script para abrir e fechar o modal -->
+    <script>
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modalImg");
+      const closeModal = document.getElementById("closeModal");
 
-  <!-- Script para abrir e fechar o modal -->
-  <script>
-    const modal = document.getElementById("modal");
-    const modalImg = document.getElementById("modalImg");
-    const closeModal = document.getElementById("closeModal");
-
-    document.querySelectorAll(".gallery-img").forEach(img => {
-      img.addEventListener("click", () => {
-        modal.classList.remove("hidden");
-        modalImg.src = img.src;
-        modalImg.alt = img.alt;
+      document.querySelectorAll(".gallery-img").forEach((img) => {
+        img.addEventListener("click", () => {
+          modal.classList.remove("hidden");
+          modalImg.src = img.src;
+          modalImg.alt = img.alt;
+        });
       });
-    });
 
-    closeModal.addEventListener("click", () => {
-      modal.classList.add("hidden");
-      modalImg.src = "";
-    });
-
-    // Fecha o modal ao clicar fora da imagem
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
+      closeModal.addEventListener("click", () => {
         modal.classList.add("hidden");
         modalImg.src = "";
-      }
-    });
-  </script>
-  
-      <!-- Footer -->
+      });
+
+      // Fecha o modal ao clicar fora da imagem
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.add("hidden");
+          modalImg.src = "";
+        }
+      });
+    </script>
+
+    <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12 mt-10">
       <div class="container mx-auto px-6">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <h3 class="text-2xl font-bold mb-4 md:mb-0">Pilar Palace</h3>
           <div class="flex space-x-6">
-            <a href="https://wa.me/31995311839" target="_blank" aria-label="WhatsApp" class="hover:text-green-400 transition text-2xl">
+            <a
+              href="https://wa.me/31995311839"
+              target="_blank"
+              aria-label="WhatsApp"
+              class="hover:text-green-400 transition text-2xl"
+            >
               <i class="bi bi-whatsapp"></i>
             </a>
-            <a href="https://instagram.com/pilar_palace_hotel" target="_blank" aria-label="Instagram" class="hover:text-pink-400 transition text-2xl">
+            <a
+              href="https://instagram.com/pilar_palace_hotel"
+              target="_blank"
+              aria-label="Instagram"
+              class="hover:text-pink-400 transition text-2xl"
+            >
               <i class="bi bi-instagram"></i>
             </a>
           </div>
